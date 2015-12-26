@@ -1,28 +1,14 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is Megan Coyle's final project for BEWD.
 
-Things you may want to cover:
+An application to make it easier for clients to sort through artwork that's available for sale, and to contact Megan when they want to purchase a collage. The includes the following:
 
-* Ruby version
+*Four different galleries: people, animals, landscape/cityscape, and still life -It will include images of the artwork, pricing information, and details about the artwork (title, medium, dimensions, link to if they'd like to order prints of the collage, and link that automatically sends an email to me telling me that they want to purchase the original work of art)
 
-* System dependencies
+*If the user is interested in buying a work of art, they will click a link that will automatically send an email to me. The email will let me know what work of art they're interested in purchasing, as well as the buyer's contact info and location (state or zip code so I can calculate shipping)
 
-* Configuration
+*There are filters that users can use to sort through the artwork - sort by price, size, date added to the application (by default, the artwork will be listed in alphabetical order by title)
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+*Something to add to the application at a later date, or to work on in the future, would be the ability for users to create &qu
+ ot;wish lists" or "favorite lists" for artwork
