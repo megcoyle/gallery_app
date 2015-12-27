@@ -10,5 +10,4 @@ An application to make it easier for clients to sort through artwork that's avai
 
 *There are filters that users can use to sort through the artwork - sort by price, size, date added to the application (by default, the artwork will be listed in alphabetical order by title)
 
-*Something to add to the application at a later date, or to work on in the future, would be the ability for users to create &qu
- ot;wish lists" or "favorite lists" for artwork
+*Something to add to the application at a later date, or to work on in the future, would be the ability for users to create "wish lists" or "favorite lists" for artwork

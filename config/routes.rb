@@ -1,4 +1,28 @@
 Rails.application.routes.draw do
+  get 'galleries/show'
+
+  get 'galleries/update'
+
+  get 'galleries/edit'
+
+  get 'galleries/new'
+
+  get 'galleries/create'
+
+  get 'galleries/destroy'
+
+  get 'artwork/show'
+
+  get 'artwork/update'
+
+  get 'artwork/edit'
+
+  get 'artwork/new'
+
+  get 'artwork/create'
+
+  get 'artwork/destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
