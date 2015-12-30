@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :admins
   devise_for :users
-  root 'galleries#index' 
+  root 'welcome#index' 
 
   get 'galleries/show'
 

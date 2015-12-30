@@ -1,0 +1,4 @@
+<h1><%= @artwork.title %> - <%= number_to_currency @artwork.price %></h1>
+<div><%= @artwork.description %></div>
+
+<%= link_to @artwork.category.name, @artwork.category %>

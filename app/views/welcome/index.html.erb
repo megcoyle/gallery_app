@@ -1,0 +1,12 @@
+<h1>Galleries</h1>
+<p>Navigate to a gallery to view more artwork</p>
+
+<section>
+  <% @categories.each do |category| %>
+    <article>
+      <section>
+        <h3><%= link_to category.name, category %></h3>
+        <% end %>
+      </section>
+    </article>
+</section>
