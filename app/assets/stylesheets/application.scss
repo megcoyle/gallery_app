@@ -1,15 +1,61 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+a, a:hover {
+	color: #7d88ff;
+    text-decoration: none;
+}
+
+.logo {
+	width: 100%;
+}
+
+nav.navbar.navbar-default {
+	background: black;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: white;
+}
+
+.navbar-default .navbar-nav > li {
+	text-align: center;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+	color: white;
+}
+
+.navbar-nav {
+	@media (min-width: 768px) {
+    float: right;
+    padding-right: 6em;
+	}
+}
+
+.col-md-3 ul {
+	list-style-type: none;
+}
+
+#site-copyright {
+    color: #fff;
+    background: #000;
+    padding: 2em;
+    text-align: center;
+}
+
+#socialmedia {
+    clear: both;
+    display: block;
+    padding-bottom: 1em;
+    padding-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+footer {
+    border-top: 2px solid #D7D7D7;
+	background: #E6E6E6;
+	padding-top: 20px;
+	margin-top: 60px;
+}

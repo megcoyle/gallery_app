@@ -7,9 +7,76 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="container">
+  		<a href="http://www.mcoyle.com"><img class="logo" src="/assets/megan-coyle-collage-artist.jpg"/></a>
+  	</div>
+  	<nav class="navbar navbar-default">
+      <ul class="nav navbar-nav">
+      	<li><%= link_to "App Home", root_path %></li>
+
+        <% if user_signed_in? %>
+          <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to "Sign up", new_user_registration_path %></li>
+          <li><%= link_to "Sign in", new_user_session_path %></li>
+        <% end %>
+      </ul>
+    </nav>
+
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 <%= yield %>
 
-</body>
+<footer>
+     <div class="col-md-3">
+     	<ul>
+     		<li>About</li>
+     		<li><a href="http://www.mcoyle.com/galleries/">Artwork</a></li>
+     		<li><a href="http://www.mcoyle.com/about/artist-bio/">Artist Bio</a></li>
+     		<li><a href="http://www.mcoyle.com/about/artist-statement/">Artist Statement</a></li>
+     		<li><a href="http://www.mcoyle.com/faq/">FAQs</a></li>
+     	</ul>
+     </div>
+     <div class="col-md-3">
+     	<ul>
+     		<li>More Info</li>
+     		<li><a href="http://www.mcoyle.com/index.php?page_id=59">Exhibits</a></li>
+     		<li><a href="http://www.mcoyle.com/index.php?page_id=110">Press</a></li>
+     		<li><a href="http://www.mcoyle.com/learn/process/">Process</a></li>
+     		<li><a href="http://www.mcoyle.com/contact/">Contact</a></li>
+     	</ul>
+     </div>
+     <div class="col-md-3">
+     	<ul>
+     		<li>Store</li>
+     		<li><a href="http://www.mcoyle.com/store/available-work/">Original Art</a></li>
+     		<li><a href="http://www.mcoyle.com/store/prints/">Prints</a></li>
+     		<li><a href="http://www.mcoyle.com/commission-work/">Custom Art</a></li>
+     		<li><a href="http://www.mcoyle.com/store/">All Merchandise</a></li>
+     	</ul>
+     </div>
+     <div class="col-md-3">
+     	<ul>
+     		<li class="blogsections">Blog Sections</li>
+     		<li><a href="http://www.mcoyle.com/category/in-the-studio-original-collage-art/">In the Studio: Original Collage Art</a></li>
+     		<li><a href="http://www.mcoyle.com/category/the-adventures-of-bosty/">The Adventures of Bosty</a></li>
+     		<li><a href="http://www.mcoyle.com/category/a-day-in-the-life-of-an-artist/">A Day in the Life of an Artist</a></li>
+     		<li><a href="http://www.mcoyle.com/category/blabberart-interviews-and-talks/">Interviews and Talks</a></li>
+     	</ul>
+     </div>
+ 	</div>
+     
+     <div id="socialmedia">
+     	<a href="http://www.facebook.com/Megan.Coyle.Art" target="_blank"><img src="/assets/facebook2.png" width="35" height="35"></a>
+        <a href="https://twitter.com/megancoyle" target="_blank"><img src="/assets/twitter.png" width="35" height="35"></a>
+        <a href="https://www.etsy.com/shop/meganacoyle" target="_blank"><img src="/assets/etsy.png" width="35" height="35"></a>
+        <a href="http://instagram.com/megancoyleartist" target="_blank"><img src="/assets/instagram.png" width="35" height="35"></a>
+        <a href="http://megancoyleart.tumblr.com/" target="_blank"><img src="/assets/tumblr.png" width="35" height="35"></a>
+        <a href="http://www.youtube.com/user/megancoyleart" target="_blank"><img src="/assets/youtube.png" width="35" height="35"></a>
+		<a href="http://www.flickr.com/photos/megancoyle/" target="_blank"><img src="/assets/flickr-2.png" width="35" height="35"></a>
+	</div>
+    <div id="site-copyright">Copyright &copy; <%= Time.now.year %> by Megan Coyle. All Rights reserved.
+    </div>
+       </footer>
+	</body>
 </html>
