@@ -47,12 +47,10 @@ ActiveRecord::Schema.define(version: 20151230210014) do
   add_index "artworks", ["category_id"], name: "index_artworks_on_category_id"
 
   create_table "categories", force: :cascade do |t|
-    t.integer  "category_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
-
-  add_index "categories", ["category_id"], name: "index_categories_on_category_id"
 
   create_table "favorites", force: :cascade do |t|
     t.integer  "title_id"

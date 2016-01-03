@@ -1,8 +1,0 @@
-<h1><%= @gallery.name %></h1>
-<h2>Take a look at some of my artwork below!</h2>
-
-<ul>
-  <% @category.artworks.each do |artwork| %>
-    <li><%= link_to truncate(artwork.title), artwork, class: 'artwork_link' %></li>
-  <% end %>
-</ul>

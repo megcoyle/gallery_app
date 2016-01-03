@@ -1,4 +1,4 @@
-<h1><%= @artwork.title %> - <%= number_to_currency @artwork.price %></h1>
-<div><%= @artwork.description %></div>
+<h1><%= @artwork.title %></h1>
+<div><img src="<%= @artwork.image %>"/></div>
 
-<%= link_to @artwork.category.name, @artwork.category %>
+<%= link_to "Back to #{@artwork.category.name.capitalize} Gallery", @artwork.category %>

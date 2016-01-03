@@ -1,3 +1,3 @@
 class Category < ActiveRecord::Base
-  belongs_to :artwork
+  has_many :artworks
 end

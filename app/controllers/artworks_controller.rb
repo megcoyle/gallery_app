@@ -1,4 +1,4 @@
-class ArtworkController < ApplicationController
+class ArtworksController < ApplicationController
  
  def new
     @artwork = Artwork.new
