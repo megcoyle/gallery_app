@@ -1,4 +1,9 @@
 <h1><%= @artwork.title %></h1>
-<div><img src="<%= @artwork.image %>"/></div>
+<img src="<%= @artwork.image %>"/>
+<p>Medium: <%= @artwork.medium %><br>
+Dimensions: <%= @artwork.dimensions %><br>
+<a href="<%= @artwork.order_print %>" target="_blank">Order a Print</a><br>
+Price: $<%= @artwork.price %><br>
+Buy the Original Work of Art</p>
 
 <%= link_to "Back to #{@artwork.category.name.capitalize} Gallery", @artwork.category %>
