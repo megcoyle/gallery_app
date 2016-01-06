@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   root 'categories#index' 
 
   resources :categories, :only => :show
-  resources :artworks, :only => [ :new, :create, :show ]
+  resources :artworks, :only => [ :new, :create, :show ] do
+    get 'sort/:sort_attribute', :to => "artworks#sort", :as => :sort, :on => :collection
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

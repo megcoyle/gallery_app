@@ -17,6 +17,11 @@ class ArtworksController < ApplicationController
     end
   end
 
+  def favorite
+    artwork = Artwork.find(params[:id])
+    current_user.artworks << artwork
+  end
+
   def show
     @artwork = Artwork.find params[:id]
   end
