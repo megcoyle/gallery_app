@@ -33,6 +33,32 @@ nav.navbar.navbar-default {
 	}
 }
 
+.gallery {
+    text-align: center;
+}
+
+.gallery-item {
+    display: inline-block;
+    width: 250px;
+    padding-bottom: 20px;
+
+    @media (max-width: 768px) {
+    display: block;
+    width: 100%;
+    }
+}
+.gallery-item img {
+    display: block;
+    margin: auto;
+    padding-bottom: 10px;
+}
+.gallery-item a {
+    font-weight: bold;
+}
+.gallery-item p {
+    margin-bottom: 0;
+}
+
 .col-md-3 ul {
 	list-style-type: none;
 }

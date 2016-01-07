@@ -1,5 +1,5 @@
 <h1><%= @artwork.title %></h1>
-<img src="<%= @artwork.image %>"/>
+<%= image_tag @artwork.photo.url %>
 <p>Medium: <%= @artwork.medium %><br>
 Dimensions: <%= @artwork.dimensions %><br>
 <a href="<%= @artwork.order_print %>" target="_blank">Order a Print</a><br>

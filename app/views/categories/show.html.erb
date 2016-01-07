@@ -2,11 +2,16 @@
 
 Sort by: 
 
-<ul>
+<div class="gallery">
   <% @category.artworks.each do |artwork| %>
-    <li><%= link_to artwork.title, artwork_path(artwork), class: 'artwork_link' %></li>
+    <div class="gallery-item">
+    	<%= link_to (image_tag artwork.photo.url(:square)), artwork_path(artwork) %>
+    	<p><%= link_to artwork.title, artwork_path(artwork), class: 'artwork_link' %></p>
+    	<p>$<%= artwork.price %></p>
+    </div>
+    
   <% end %>
 
-</ul>
+</div>
 
 <div><%= link_to "Back to Galleries", root_path %></div>

@@ -1,7 +1,7 @@
 <h1>Add a Work of Art</h1>
 
 <div class="container">
-  <%= form_for @artwork do |f| %>
+  <%= form_for @artwork, multipart: true do |f| %>
     <div class="form-group">
       <%= f.label :title %>
       <%= f.text_field :title, class: 'form-control' %>
@@ -13,6 +13,10 @@
     <div class="form-group">
       <%= f.label :price %>
       <%= f.number_field :price, step: 0.01, class: 'form-control'%>
+    </div>
+    <div class="form-group">
+    <%= f.label :photo %>
+    <%= f.file_field :photo, class: 'form-control'%>
     </div>
     <%= f.submit 'Submit', class: 'btn btn-primary btn-lg' %>
   <% end %>
