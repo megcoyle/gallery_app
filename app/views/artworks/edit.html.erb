@@ -1,2 +1,11 @@
-<h1>Artwork#edit</h1>
-<p>Find me in app/views/artwork/edit.html.erb</p>
+<h1>Update a Work of Art</h1>
+
+<div class="container">
+<% if flash[:error] %>
+  <p><%= flash[:error] %></p>
+<% end %>
+
+<%= render 'form' %>
+
+<%= link_to "Cancel", root_path %>
+</div>

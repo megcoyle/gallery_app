@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GalleryApp</title>
+  <title>Megan Coyle: Collage Artist and Illustrator - Gallery Application</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -22,13 +22,14 @@
         <% end %>
       </ul>
     </nav>
+</div>
 
+<div class="container">
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
-<div class="container">
 <%= yield %>
 </div>
-<footer>
+    <footer>
      <div class="col-md-3">
      	<ul>
      		<li>About</li>
@@ -65,19 +66,18 @@
      		<li><a href="http://www.mcoyle.com/category/blabberart-interviews-and-talks/">Interviews and Talks</a></li>
      	</ul>
      </div>
- 	</div>
      
      <div id="socialmedia">
-     	<a href="http://www.facebook.com/Megan.Coyle.Art" target="_blank"><img src="/assets/facebook2.png" width="35" height="35"></a>
+     	  <a href="http://www.facebook.com/Megan.Coyle.Art" target="_blank"><img src="/assets/facebook2.png" width="35" height="35"></a>
         <a href="https://twitter.com/megancoyle" target="_blank"><img src="/assets/twitter.png" width="35" height="35"></a>
         <a href="https://www.etsy.com/shop/meganacoyle" target="_blank"><img src="/assets/etsy.png" width="35" height="35"></a>
         <a href="http://instagram.com/megancoyleartist" target="_blank"><img src="/assets/instagram.png" width="35" height="35"></a>
         <a href="http://megancoyleart.tumblr.com/" target="_blank"><img src="/assets/tumblr.png" width="35" height="35"></a>
         <a href="http://www.youtube.com/user/megancoyleart" target="_blank"><img src="/assets/youtube.png" width="35" height="35"></a>
-		<a href="http://www.flickr.com/photos/megancoyle/" target="_blank"><img src="/assets/flickr-2.png" width="35" height="35"></a>
-	</div>
-    <div id="site-copyright">Copyright &copy; <%= Time.now.year %> by Megan Coyle. All Rights reserved.
-    </div>
-       </footer>
+		    <a href="http://www.flickr.com/photos/megancoyle/" target="_blank"><img src="/assets/flickr-2.png" width="35" height="35"></a>
+	   </div>
+      <div id="site-copyright">Copyright &copy; <%= Time.now.year %> by Megan Coyle. All Rights reserved.
+      </div>
+    </footer>
 	</body>
 </html>

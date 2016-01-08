@@ -1,6 +1,5 @@
 class Artwork < ActiveRecord::Base
   belongs_to :category
-  belongs_to :admin
   belongs_to :user
 
   has_attached_file :photo, styles: {

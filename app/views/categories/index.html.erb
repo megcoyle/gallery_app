@@ -1,5 +1,8 @@
 <h1>Artwork Available for Sale</h1>
-<p>Navigate to a gallery to view more artwork</p>
+<% if user_signed_in? %>
+<p><%= link_to "Add a work of Art", new_artwork_path %></p>
+<% end %>
+<p>Navigate to a gallery to view artwork that is available for sale.</p>
 <section>
 <ul>
   <% @categories.each do |category| %>

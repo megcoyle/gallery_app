@@ -6,4 +6,8 @@ Dimensions: <%= @artwork.dimensions %><br>
 Price: $<%= @artwork.price %><br>
 Buy the Original Work of Art</p>
 
+<% if user_signed_in? %>
+<p><%= link_to "Edit Artwork", edit_artwork_path(@artwork) %> | <%= link_to "Delete Artwork", artwork_path(@artwork), method: 'delete' %></p>
+<% end %>
+
 <%= link_to "Back to #{@artwork.category.name.capitalize} Gallery", @artwork.category %>

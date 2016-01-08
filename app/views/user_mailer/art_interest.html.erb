@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Interest in Artwork</h1>
+    <p>User <%= @user.email %> is interested in the following work of art:</p>
+    <p><%= @artwork.title %><br>
+    Dimensions: <%= @artwork.dimensions %><br>
+    Price: $<%= @artwork.price %></p>
+  </body>
+</html>

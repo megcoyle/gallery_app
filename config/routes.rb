@@ -3,8 +3,12 @@ Rails.application.routes.draw do
   devise_for :users
   root 'categories#index' 
 
+  authenticate :user do
+    resources :artworks, :only => [:new, :create, :edit, :update, :destroy]
+  end
+
   resources :categories, :only => :show
-  resources :artworks, :only => [ :new, :create, :show ] do
+  resources :artworks, :only => [ :show ] do
     get 'sort/:sort_attribute', :to => "artworks#sort", :as => :sort, :on => :collection
   end
 

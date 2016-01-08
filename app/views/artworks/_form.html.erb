@@ -1,0 +1,31 @@
+<%= form_for @artwork do |f| %>
+  <fieldset>
+    <div class="form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= label_tag :category %>
+      <%= text_field_tag :category, nil, class: 'form-control' %>
+      
+    </div>
+    <div class="form-group">
+      <%= f.label :price %>
+      <%= f.number_field :price, step: 0.01, class: 'form-control'%>
+    </div>
+    <div class="form-group">
+      <%= f.label :dimensions %>
+      <%= f.text_field :dimensions, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :order_print %>
+      <%= f.text_field :order_print, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+    <%= f.label :photo %>
+    <%= f.file_field :photo, class: 'form-control'%>
+    </div>
+  </fieldset>
+
+  <%= f.submit @artwork.new_record? ? "Create" : "Update" %>
+<% end %>
