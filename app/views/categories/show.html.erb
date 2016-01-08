@@ -1,9 +1,9 @@
 <h1><%= @category.name.capitalize %></h1>
 
-Sort by: 
+<p>Sort by: <%= link_to "Price", "?sort=price" %> | <%= link_to "Title", "?sort=title" %> | <%= link_to "Recently Added", "?sort=created_at" %></p>
 
 <div class="gallery">
-  <% @category.artworks.each do |artwork| %>
+  <% @artworks.each do |artwork| %>
     <div class="gallery-item">
     	<%= link_to (image_tag artwork.photo.url(:square)), artwork_path(artwork) %>
     	<p><%= link_to artwork.title, artwork_path(artwork), class: 'artwork_link' %></p>

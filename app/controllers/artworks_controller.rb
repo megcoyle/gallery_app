@@ -26,6 +26,7 @@ class ArtworksController < ApplicationController
     @artwork = Artwork.find params[:id]
   end
 
+
 def safe_create_params
     params.require(:artwork).permit(:title, :price, :photo)
   end

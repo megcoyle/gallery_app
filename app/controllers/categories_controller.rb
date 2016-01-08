@@ -1,6 +1,13 @@
 class CategoriesController < ApplicationController
   def show
     @category = Category.where(id: params[:id]).includes(:artworks).first  
+    @artworks = if params[:sort] == 'price'
+                  @category.artworks.order(:price)
+                elsif params[:sort] == 'title'
+                  @category.artworks.order(:title)
+                else
+                  @category.artworks.order(:created_at)
+                end
   end
 
 def index
