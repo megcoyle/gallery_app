@@ -1,17 +1,30 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-a, a:hover {
+a {
 	color: #7d88ff;
     text-decoration: none;
+        &:hover {
+        color: #4d5cff;
+        text-decoration: none;
+    }
 }
 
 .logo {
 	width: 100%;
 }
 
+img {
+    max-width: 100%;
+}
+
 nav.navbar.navbar-default {
 	background: black;
+    font-size: 1.3em;
+}
+
+.navbar-nav {
+    margin: 7.5px 0;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -41,6 +54,8 @@ nav.navbar.navbar-default {
     display: inline-block;
     width: 250px;
     padding-bottom: 20px;
+    vertical-align: middle;
+    height: 300px;
 
     @media (max-width: 768px) {
     display: block;
@@ -52,6 +67,9 @@ nav.navbar.navbar-default {
     margin: auto;
     padding-bottom: 10px;
 }
+.gallery-item img:hover {
+    opacity: .8;
+}
 .gallery-item a {
     font-weight: bold;
 }
@@ -61,6 +79,35 @@ nav.navbar.navbar-default {
 
 .col-md-3 ul {
 	list-style-type: none;
+}
+
+.editing {
+    padding-top: 20px;
+}
+
+.btn.btn-default {
+    color: white;
+    background-color: #7d88ff;
+    border-color: white;
+    margin: 0 auto;
+    padding: 10px;
+    width: 100%;
+    max-width: 700px;
+}
+
+.btn.btn-default:hover {
+    color: #7d88ff;
+    background-color: white;
+    border-color: #7d88ff;
+}
+
+.med-button {
+    text-align: center;
+}
+
+.small-button {
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 #site-copyright {
@@ -82,6 +129,6 @@ nav.navbar.navbar-default {
 footer {
     border-top: 2px solid #D7D7D7;
 	background: #E6E6E6;
-	padding-top: 20px;
-	margin-top: 60px;
+	padding-top: 50px;
+	margin-top: 120px;
 }

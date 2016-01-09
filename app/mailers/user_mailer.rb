@@ -1,7 +1,8 @@
 class UserMailer < ApplicationMailer
 
-	def artwork_email
+	def request_art(user, artwork)
 		@user = user
-		mail(to: meg@mcoyle.com, subject: "Interested in Buying a Collage")
+		@artwork = artwork
+		mail(:to => "meg@mcoyle.com", :replyto => @user.email, :subject => "Interested in Buying #{@artwork.title}")
 	end
 end

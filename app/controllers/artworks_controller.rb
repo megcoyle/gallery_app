@@ -22,6 +22,16 @@ class ArtworksController < ApplicationController
     current_user.artworks << artwork
   end
 
+  def send_request
+    @user = current_user
+    @artwork = Artwork.find(params[:id])
+    if user_signed_in?
+      UserMailer.request_art(current_user, @artwork).deliver
+      flash[:notice] = "Megan has been notified of your interest. She will email you as soon as possible with purchasing details."
+      redirect_to @artwork
+    end
+  end
+
   def show
     @artwork = Artwork.find params[:id]
   end
@@ -32,7 +42,8 @@ class ArtworksController < ApplicationController
 
   def update
     @artwork = Artwork.find(params[:id])
-    if @artwork.update(artwork_params)
+    if @artwork.update(safe_create_params)
+      flash[:notice] = "The artwork has been updated."
       redirect_to artwork_path(@artwork)
     else
       flash.now[:error] = @artwork.errors.messages.first.join(" ")
@@ -43,6 +54,7 @@ class ArtworksController < ApplicationController
   def destroy
     @artwork = Artwork.find(params[:id])
     @artwork.destroy
+    flash[:notice] = "'#{@artwork.title}' has been deleted."
     redirect_to root_path
   end
 

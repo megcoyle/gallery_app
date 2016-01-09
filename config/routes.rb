@@ -3,6 +3,13 @@ Rails.application.routes.draw do
   devise_for :users
   root 'categories#index' 
 
+  resources :artworks do
+    resources :loans
+    member do
+      get 'send_request' => 'artworks#send_request'
+    end
+  end
+
   authenticate :user do
     resources :artworks, :only => [:new, :create, :edit, :update, :destroy]
   end

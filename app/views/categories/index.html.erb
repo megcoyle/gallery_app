@@ -1,14 +1,23 @@
 <h1>Artwork Available for Sale</h1>
-<% if user_signed_in? %>
-<p><%= link_to "Add a work of Art", new_artwork_path %></p>
+<% if admin_signed_in? %>
+<p><%= link_to "Add a Work of Art", new_artwork_path %></p>
 <% end %>
 <p>Navigate to a gallery to view artwork that is available for sale.</p>
 <section>
-<ul>
+<div class="gallery">
   <% @categories.each do |category| %>
-    <li>
-      <%= link_to category.name.capitalize, category_path(category) %>
-    </li>
+    <div class="gallery-item">
+      <h3><%= link_to category.name.capitalize, category_path(category) %></h3>
+      <% if category.name == "animals" %>
+      	<%= link_to (image_tag "/images/available-animals.jpg"), category_path(category) %>
+      	<% elsif category.name == "people" %>
+      	<%= link_to (image_tag "/images/available-people.jpg"), category_path(category) %>
+      	<% elsif category.name == "places" %>
+      	<%= link_to (image_tag "/images/available-places.jpg"), category_path(category) %>
+      	<% elsif category.name == "things" %>
+      	<%= link_to (image_tag "/images/available-stilllife.jpg"), category_path(category) %>
+      	<% end %>
+    </div>
   <% end %>
-</ul>
+</div>
 </section>
