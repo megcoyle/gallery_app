@@ -7,13 +7,13 @@ Price: $<%= @artwork.price %><br>
 <% if user_signed_in? %>
 	<%= link_to "Buy the Original Work of Art", send_request_artwork_path(@artwork) %>
 <% else %>
-	<%= link_to "Want to Buy the Original? Sign in!", new_user_session_path %>
+	<strong><%= link_to "Want to Buy the Original? Sign in!", new_user_session_path %></strong>
 <% end %>
 </p>
 
 <div class="small-button"><%= link_to "Back to #{@artwork.category.name.capitalize} Gallery", @artwork.category, class: "btn btn-default" %></div>
 
-<% if user_signed_in? %>
+<% if admin_signed_in? %>
 <div class="editing">
 <p><%= link_to "Edit Artwork", edit_artwork_path(@artwork) %> | <%= link_to "Delete Artwork", artwork_path(@artwork), method: 'delete' %></p>
 </div>

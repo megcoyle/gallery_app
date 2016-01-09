@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     end
   end
 
-  authenticate :user do
+  authenticate :admin do
     resources :artworks, :only => [:new, :create, :edit, :update, :destroy]
   end
 
