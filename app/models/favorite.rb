@@ -1,4 +1,4 @@
 class Favorite < ActiveRecord::Base
   belongs_to :user
-  has_many :artworks
+  belongs_to :artwork
 end
