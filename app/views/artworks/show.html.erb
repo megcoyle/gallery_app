@@ -4,11 +4,7 @@
 Dimensions: <%= @artwork.dimensions %><br>
 <a href="<%= @artwork.order_print %>" target="_blank">Order a Print</a><br>
 Price: $<%= @artwork.price %><br>
-<% if user_signed_in? %>
-	<%= link_to "Buy the Original Work of Art", send_request_artwork_path(@artwork) %>
-<% else %>
-	<strong><%= link_to "Want to Buy the Original? Sign in!", new_user_session_path %></strong>
-<% end %>
+<strong><a href="mailto:meg@mcoyle.com?subject=<%= @artwork.title %>&amp;body=Hi%20Megan,%0D%0A%0D%0AI'm%20interested%20in%20buying:%0D%0A%0D%0ATitle:%20<%= @artwork.title %>%0D%0ADimensions:%20<%= @artwork.dimensions%>%0D%0APrice:%20$<%= @artwork.price %>">Buy the Original Work of Art</a></strong>
 </p>
 
 <div class="small-button"><%= link_to "Back to #{@artwork.category.name.capitalize} Gallery", @artwork.category, class: "btn btn-default" %></div>
