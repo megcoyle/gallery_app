@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     end
   end
 
+  post 'artworks/:id/favorite' => 'artworks#favorite'
+
   authenticate :users do
     resources :artworks, :only => [:new, :create, :edit, :update, :destroy]
   end
