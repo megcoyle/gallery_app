@@ -123,7 +123,7 @@ Artwork.create(photo: File.new("db/seed_images/smiling-birdy.jpg"),
                   price: 100,
                   order_print: "http://www.imagekind.com/Smiling-Birdy_art?imid=5beb65ab-e369-4cee-b0f1-e7312dc23653")
 
-Artwork.create(photo: File.new("db/seed_images/Squirrel.jpg"),
+Artwork.create(photo: File.new("db/seed_images/squirrel.jpg"),
 				  title: "Squirrel!",
 				  medium: "Collage",
 				  dimensions: '5"x7"',
