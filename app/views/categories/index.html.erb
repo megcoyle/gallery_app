@@ -1,5 +1,5 @@
 <h1>Artwork Available for Sale</h1>
-<% if admin_signed_in? %>
+<% if policy(@artwork).create? %>
 <p><%= link_to "Add a Work of Art", new_artwork_path %></p>
 <% end %>
 <p>Navigate to a gallery to view artwork that is available for sale.</p>

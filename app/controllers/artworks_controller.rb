@@ -5,7 +5,7 @@ class ArtworksController < ApplicationController
   end
 
   def create
-    @artwork = current_admin.artworks.build safe_create_params
+    @artwork = current_user.artworks.build safe_create_params
     @artwork.category = Category.find_or_create_by(name: params[:category])
 
     if @artwork.save
@@ -42,6 +42,7 @@ class ArtworksController < ApplicationController
 
   def update
     @artwork = Artwork.find(params[:id])
+    authorize @artwork
     if @artwork.update(safe_create_params)
       flash[:notice] = "The artwork has been updated."
       redirect_to artwork_path(@artwork)

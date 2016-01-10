@@ -6,12 +6,13 @@ class CategoriesController < ApplicationController
                 elsif params[:sort] == 'title'
                   @category.artworks.order(:title)
                 else
-                  @category.artworks.order(:created_at)
+                  @category.artworks.order(:created_at).reverse
                 end
   end
 
 def index
     @categories = Category.order(:name).all
+    @artwork = Artwork.new
 end
 
   def update

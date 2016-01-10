@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :admins
   devise_for :users
   root 'categories#index' 
 
@@ -10,7 +9,7 @@ Rails.application.routes.draw do
     end
   end
 
-  authenticate :admin do
+  authenticate :users do
     resources :artworks, :only => [:new, :create, :edit, :update, :destroy]
   end
 
